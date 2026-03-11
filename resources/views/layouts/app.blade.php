@@ -9,22 +9,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* Smooth fill animation for skill progress bars */
+       
         .progress-bar {
             transition: width 1.2s ease-in-out;
         }
 
-        /* Start all bars at 0 width — JS will animate them to real % */
+        
         .progress-bar-animated-load {
             width: 0 !important;
         }
 
-        /* Active nav link underline */
+      
         .navbar .nav-link.active {
             border-bottom: 2px solid #fff;
         }
 
-        /* Footer always at bottom */
+      
         body {
             display: flex;
             flex-direction: column;
@@ -33,16 +33,12 @@
         main { flex: 1; }
     </style>
 
-    {{-- Extra head content per page (e.g. page-specific CSS) --}}
+    
     @stack('styles')
 </head>
 <body>
 
-{{-- ══════════════════════════════════════════════════════
-     NAVBAR
-     request()->routeIs('home') → true when on the home page
-     This adds Bootstrap's "active" class to the right link
-══════════════════════════════════════════════════════ --}}
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand fw-bold" href="{{ route('home') }}">
@@ -95,10 +91,7 @@
     </div>
 </nav>
 
-{{-- ══════════════════════════════════════════════════════
-     FLASH MESSAGES  (session-based, one-time notifications)
-     These appear after form submissions and redirects.
-══════════════════════════════════════════════════════ --}}
+
 <div class="container mt-3">
     @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -115,10 +108,7 @@
     @endif
 </div>
 
-{{-- ══════════════════════════════════════════════════════
-     MAIN CONTENT
-     Each page view fills in this @yield('content') section
-══════════════════════════════════════════════════════ --}}
+
 <main class="container my-4">
     @yield('content')
 </main>
