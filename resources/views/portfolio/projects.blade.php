@@ -4,13 +4,11 @@
 
 @section('content')
 
-{{-- ══════════════════════════════════════════════════════
-     PAGE HEADER
-══════════════════════════════════════════════════════ --}}
+
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
         <h1 class="fw-bold mb-1">My Projects</h1>
-        {{-- $totalProjects is passed from PortfolioController::portfolio() --}}
+      
         <p class="text-muted mb-0">{{ $totalProjects }} project{{ $totalProjects !== 1 ? 's' : '' }} total</p>
     </div>
     <a href="{{ route('contact') }}" class="btn btn-outline-primary">
@@ -18,11 +16,7 @@
     </a>
 </div>
 
-{{-- ══════════════════════════════════════════════════════
-     PROJECTS GRID
-     $projects is passed from PortfolioController::portfolio()
-     @forelse = @foreach + handles the empty case with @empty
-══════════════════════════════════════════════════════ --}}
+
 <div class="row g-4">
 
     @forelse($projects as $project)
