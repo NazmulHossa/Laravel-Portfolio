@@ -9,8 +9,7 @@ class SkillSeeder extends Seeder
 {
     public function run(): void
     {
-        // truncate() deletes all existing rows first, then resets ID back to 1
-        // So running db:seed twice won't create duplicates
+       
         Skill::truncate();
 
         $skills = [
