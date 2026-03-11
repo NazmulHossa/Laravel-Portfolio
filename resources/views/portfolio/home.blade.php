@@ -4,9 +4,7 @@
 
 @section('content')
 
-{{-- ══════════════════════════════════════════════════════
-     HERO SECTION
-══════════════════════════════════════════════════════ --}}
+
 <div class="py-5 text-center bg-dark text-white rounded-3 mb-5 px-4">
     <h1 class="display-4 fw-bold mb-3">Hi, I'm a Full Stack Developer 👋</h1>
     <p class="lead text-secondary mb-4">
@@ -23,11 +21,7 @@
     </div>
 </div>
 
-{{-- ══════════════════════════════════════════════════════
-     SKILLS SECTION
-     $skills is passed from PortfolioController::home()
-     Sorted highest → lowest by the ordered() scope
-══════════════════════════════════════════════════════ --}}
+
 <div class="row justify-content-center mb-5">
     <div class="col-lg-8">
 
@@ -70,11 +64,7 @@
     </div>
 </div>
 
-{{-- ══════════════════════════════════════════════════════
-     RECENT PROJECTS PREVIEW
-     $recentProjects passed from PortfolioController::home()
-     Shows the 3 newest projects as a teaser
-══════════════════════════════════════════════════════ --}}
+
 @if($recentProjects->isNotEmpty())
     <div class="mb-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
