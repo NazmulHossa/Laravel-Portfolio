@@ -12,22 +12,11 @@
         <h1 class="fw-bold mb-1">Get In Touch</h1>
         <p class="text-muted mb-4">Have a project in mind or want to collaborate? Send me a message!</p>
 
-        {{-- CONTACT FORM
-             action  → where to POST the data (route named 'contact.send')
-             method  → always POST for forms that save data
-
-             @csrf   → REQUIRED for every POST/PUT/DELETE form in Laravel.
-                       Adds a hidden token field that Laravel checks.
-                       Without it, Laravel throws a 419 "Page Expired" error.
-                       This protects against Cross-Site Request Forgery attacks. --}}
+       
         <form action="{{ route('contact.send') }}" method="POST" novalidate>
             @csrf
 
-            {{-- NAME FIELD
-                 @error('name')     → true if 'name' failed validation
-                 is-invalid         → Bootstrap class that shows red border
-                 old('name')        → re-fills the field if validation failed
-                                      so the user doesn't lose what they typed --}}
+           
             <div class="mb-3">
                 <label for="name" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
                 <input type="text"
